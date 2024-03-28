@@ -1,0 +1,19 @@
+#Import Libaries
+import yfinance as yf
+import pip._vendor.requests as request
+import numpy
+import pandas
+from bs4 import BeautifulSoup
+import csv
+from datetime import datetime
+
+
+#Stocklist to parse through, change file path to required ones for where you save the csv file. 
+Stocklist = open('C://Users//PythonADDIN//StockList.csv')
+OpenedStockList = csv.reader(Stocklist, delimiter=' ')
+
+
+MetaStock = yf.Ticker('META')
+TSLAStock = yf.Ticker('TSLA')
+AppleStock = yf.Ticker('AAPL')
+NVDAStock = yf.Ticker('NVDA')
